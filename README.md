@@ -269,8 +269,6 @@ public class TimerActivity : Activity() {
         private var timer: Timer? = null
     }
 
-    var textView : TextView? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout....)
@@ -280,7 +278,7 @@ public class TimerActivity : Activity() {
             timer = Timer(TIME, INTERVAL, applicationContext)
             timer?.start()
         }
-        timer?.textView = findViewById<TextView>(android.R.id.content)
+        timer?.textView = findViewById<TextView>(R.id.text)
     }
 
     override fun onDestroy() {
